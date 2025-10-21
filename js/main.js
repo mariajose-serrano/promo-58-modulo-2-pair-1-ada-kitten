@@ -1,15 +1,18 @@
 "use strict";
 const jsList = document.querySelector(".js-list");
 
+const kittenSiamesDesc =
+  "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+
+const kittenSiamesBreed = ""; // 'Siamés';
+
 const kittenSiames = `<li class="card">
           <article>
             <img class="card_img" src="https://dev.adalab.es/gato-siames.webp" alt="siames-cat" />
             <h3 class="card_title">Anastacio</h3>
-            <h4 class="card_race">Siamés</h4>
+            <h4 class="card_race">${kittenSiamesBreed}</h4>
             <p class="card_description">
-              Porte elegante, su patrón de color tan característico y sus ojos
-              de un azul intenso, pero su historia se remonta a Asía al menos
-              hace 500 años, donde tuvo su origen muy posiblemente.
+              ${kittenSiamesDesc}
             </p>
           </article>
         </li>`;
@@ -36,9 +39,6 @@ const kittenMaine = `
             Sus ojos son grandes y las orejas resultan largas y en punta.
           </p>
         </li>`;
-
-const kittenSiamesDesc =
-  "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
 
 const kittenSphynxDesc =
   "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
