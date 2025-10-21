@@ -42,5 +42,5 @@ jsList.innerHTML = kittenSiames + kittenSphynx + kittenMaine;
 const jsnewform = document.querySelector(".js-new-form");
 const addbutton = document.querySelector(".js-btn-add");
 addbutton.addEventListener("click", (ev) => {
-  jsnewform.classList.remove("collapsed");
+  jsnewform.classList.toggle("collapsed");
 });
