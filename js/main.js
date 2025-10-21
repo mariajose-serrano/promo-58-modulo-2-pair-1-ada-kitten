@@ -37,6 +37,15 @@ const kittenMaine = `
           </p>
         </li>`;
 
+const kittenSiamesDesc =
+  "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+
+const kittenSphynxDesc =
+  "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+
+const kittenMaineDesc =
+  "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
+
 jsList.innerHTML = kittenSiames + kittenSphynx + kittenMaine;
 
 const jsnewform = document.querySelector(".js-new-form");
@@ -64,11 +73,9 @@ searchButton.addEventListener("click", (ev) => {
   }
 });
 
-const kittenSiamesDesc =
-  "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+const btnCancel = document.querySelector(".js_btn-cancel");
 
-const kittenSphynxDesc =
-  "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
-
-const kittenMaineDesc =
-  "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
+btnCancel.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  jsnewform.classList.add("collapsed");
+});
