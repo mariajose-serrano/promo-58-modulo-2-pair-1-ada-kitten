@@ -27,14 +27,16 @@ const kittenSiames = `<li class="card">
         </li>`;
 
 const kittenSphynxBreed = "Sphynx";
-const kittenSphynxName = "Fiona";
+let kittenSphynxName = "Fiona";
+const kittenSphynxNameUpper = kittenSphynxName.toUpperCase();
+
 const kittenSphynxImg = "https://dev.adalab.es/sphynx-gato.webp";
 const kittenSphynxDesc =
   "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
 
 const kittenSphynx = `<li class="card">
           <img class="card_img" src=${kittenSphynxImg} alt="sphynx-cat" />
-          <h3 class="card_title">${kittenSphynxName}</h3>
+          <h3 class="card_title">${kittenSphynxNameUpper}</h3>
           <h4 class="card_race">${kittenSphynxBreed}</h4>
           <p class="card_description">
           ${kittenSphynxDesc}
@@ -42,7 +44,9 @@ const kittenSphynx = `<li class="card">
         </li>`;
 
 const kittenMaineBreed = "Maine";
-const kittenMaineName = "Cielo";
+let kittenMaineName = "Cielo";
+const kittenMaineNameUpper = kittenMaineName.toUpperCase();
+
 const kittenMaineDesc =
   "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
 const kittenMaineImg = "https://dev.adalab.es/maine-coon-cat.webp";
@@ -50,7 +54,7 @@ const kittenMaineImg = "https://dev.adalab.es/maine-coon-cat.webp";
 const kittenMaine = `
  <li class="card">
           <img class="card_img" src=${kittenMaineImg} alt="maine-coon-cat" />
-          <h3 class="card_title">${kittenMaineName}</h3>
+          <h3 class="card_title">${kittenMaineNameUpper}</h3>
           <h4 class="card_race">${kittenMaineBreed}</h4>
           <p class="card_description">
           ${kittenMaineDesc}
