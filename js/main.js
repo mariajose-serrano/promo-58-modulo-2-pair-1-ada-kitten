@@ -1,15 +1,22 @@
 "use strict";
 const jsList = document.querySelector(".js-list");
+const jsnewform = document.querySelector(".js-new-form");
+const addbutton = document.querySelector(".js-btn-add");
+const inputDescription = document.querySelector(".js_in_search_desc");
+const searchButton = document.querySelector(".js_button-search");
+const btnCancel = document.querySelector(".js_btn-cancel");
 
 const kittenSiamesDesc =
   "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
 
-const kittenSiamesBreed = ""; // 'Siamés';
+const kittenSiamesBreed = "Siames";
+const kittenSiamesName = "Anastacio";
+const kittenSiamesImg = "https://dev.adalab.es/gato-siames.webp";
 
 const kittenSiames = `<li class="card">
           <article>
-            <img class="card_img" src="https://dev.adalab.es/gato-siames.webp" alt="siames-cat" />
-            <h3 class="card_title">Anastacio</h3>
+            <img class="card_img" src=${kittenSiamesImg} alt="siames-cat" />
+            <h3 class="card_title">${kittenSiamesName}</h3>
             <h4 class="card_race">${kittenSiamesBreed}</h4>
             <p class="card_description">
               ${kittenSiamesDesc}
@@ -48,14 +55,10 @@ const kittenMaineDesc =
 
 jsList.innerHTML = kittenSiames + kittenSphynx + kittenMaine;
 
-const jsnewform = document.querySelector(".js-new-form");
-const addbutton = document.querySelector(".js-btn-add");
 addbutton.addEventListener("click", (ev) => {
   jsnewform.classList.toggle("collapsed");
 });
 
-const inputDescription = document.querySelector(".js_in_search_desc");
-const searchButton = document.querySelector(".js_button-search");
 searchButton.addEventListener("click", (ev) => {
   ev.preventDefault();
   const descrSearchText = inputDescription.value;
@@ -72,8 +75,6 @@ searchButton.addEventListener("click", (ev) => {
     jsList.innerHTML = kittenMaine;
   }
 });
-
-const btnCancel = document.querySelector(".js_btn-cancel");
 
 btnCancel.addEventListener("click", (ev) => {
   ev.preventDefault();
