@@ -1,3 +1,10 @@
+// QUERY SELECTOR
+
+// 1. lo primero de todo poner use strict
+
+// 2. le tenemos que poner una clase de js al boton para traernoslo a js.
+// esa clase la tenemos que guardar en una constante
+
 "use strict";
 const jsList = document.querySelector(".js-list");
 const jsnewform = document.querySelector(".js-new-form");
@@ -44,6 +51,8 @@ const kittenSphynx = `<li class="card">
         </li>`;
 
 const kittenMaineBreed = "Maine";
+
+// VARIABLES-DATOS DE LA PÁGINA
 let kittenMaineName = "Cielo";
 const kittenMaineNameUpper = kittenMaineName.toUpperCase();
 
@@ -62,6 +71,9 @@ const kittenMaine = `
         </li>`;
 
 jsList.innerHTML = kittenSiames + kittenSphynx + kittenMaine;
+
+//1. SI PONEMOS LA CLASE COLLAPSED A NEW FORM EN HTML  SE QUITA Y SE PONE, PERO DE PRIMERAS CUANDO LE DEMOS CLICK AL BOTON DE + SE TIENE QUE QUITA, VA A EMPEZAR UN EVENTO,
+//CUANDO HACEMOS CLICK EL FORMULARIO SE TIENE QUE MOSTRAR, EL BOTON ME LO TENGO QUE TRAER DE HTML A JAVASCRIPT CON UN QUERYSELECTOR
 
 addbutton.addEventListener("click", (ev) => {
   jsnewform.classList.toggle("collapsed");
