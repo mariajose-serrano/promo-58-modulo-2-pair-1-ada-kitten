@@ -25,7 +25,7 @@ const kittenSiamesImg = "https://dev.adalab.es/gato-siames.webp";
 const kittenSiames = `<li class="card">
           <article>
             <img class="card_img" src=${kittenSiamesImg} alt="siames-cat" />
-            <h3 class="card_title">${kittenSiamesNameUpper}</h3> 
+            <h3 class="card_title">${kittenSiamesNameUpper}</h3>
             <h4 class="card_race">${kittenSiamesBreed}</h4>
             <p class="card_description">
               ${kittenSiamesDesc}
@@ -83,16 +83,19 @@ searchButton.addEventListener("click", (ev) => {
   ev.preventDefault();
   const descrSearchText = inputDescription.value;
 
+  jsList = '';
+
+
   if (kittenSiamesDesc.includes(descrSearchText)) {
-    jsList.innerHTML = kittenSiames;
+    jsList.innerHTML += kittenSiames;
   }
 
   if (kittenSphynxDesc.includes(descrSearchText)) {
-    jsList.innerHTML = kittenSphynx;
+    jsList.innerHTML += kittenSphynx;
   }
 
   if (kittenMaineDesc.includes(descrSearchText)) {
-    jsList.innerHTML = kittenMaine;
+    jsList.innerHTML += kittenMaine;
   }
 });
 
