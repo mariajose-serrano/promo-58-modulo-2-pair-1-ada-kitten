@@ -156,15 +156,15 @@ btnCancel.addEventListener("click", (ev) => {
 
 inputAdd.addEventListener("click", (ev) => {
   ev.preventDefault();
-
+  console.log("Estoy entrando en el evento")
   //para capturar el valor de ese input es .value
-  valueUrl = inputURL.value;
+  const valueUrl = inputURL.value;
 
-  valueName = inputName.value;
+  const valueName = inputName.value;
 
-  valueRace = inputRace.value;
+  const valueRace = inputRace.value;
 
-  valueDesc = inputDesc.value;
+  const  valueDesc = inputDesc.value;
 
   renderKitten(valueUrl, valueDesc, valueName, valueRace);
 });
