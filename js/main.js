@@ -39,7 +39,7 @@ const inputDesc = document.querySelector(".js-inputDesc");
 const inputAdd = document.querySelector(".js-inputAdd");
 
 // Tenemos que crear objetos con los gatitos;
-//
+// Este es el primer objeto:
 
 const kittenSiamesData = {
   desc: "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente",
@@ -48,60 +48,54 @@ const kittenSiamesData = {
   image: "https://dev.adalab.es/gato-siames.webp",
 };
 
-// const kittenSiamesDesc =
-//"Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
-
-//const kittenSiamesBreed = "Siames";
-//let kittenSiamesName = "Anastacio";
-const kittenSiamesNameUpper = kittenSiamesName.toUpperCase();
-
-//const kittenSiamesImg = "https://dev.adalab.es/gato-siames.webp";
+const kittenSiamesNameUpper = kittenSiamesData.name.toUpperCase();
 
 const kittenSiames = `<li class="card">
           <article>
-            <img class="card_img" src=${kittenSiamesImg} alt="siames-cat" />
+            <img class="card_img" src=${kittenSiamesData.image} alt="siames-cat" />
             <h3 class="card_title">${kittenSiamesNameUpper}</h3>
-            <h4 class="card_race">${kittenSiamesBreed}</h4>
+            <h4 class="card_race">${kittenSiamesData.breed}</h4>
             <p class="card_description">
-              ${kittenSiamesDesc}
+              ${kittenSiamesData.desc}
             </p>
           </article>
         </li>`;
 
-const kittenSphynxBreed = "Sphynx";
-let kittenSphynxName = "Fiona";
-const kittenSphynxNameUpper = kittenSphynxName.toUpperCase();
+const kittenSphynxData = {
+  desc: "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.",
+  breed: "Sphynx",
+  name: "Fiona",
+  image: "https://dev.adalab.es/sphynx-gato.webp",
+};
 
-const kittenSphynxImg = "https://dev.adalab.es/sphynx-gato.webp";
-const kittenSphynxDesc =
-  "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+const kittenSphynxNameUpper = kittenSphynxData.name.toUpperCase();
 
 const kittenSphynx = `<li class="card">
-          <img class="card_img" src=${kittenSphynxImg} alt="sphynx-cat" />
+          <img class="card_img" src=${kittenSphynxData.image} alt="sphynx-cat" />
           <h3 class="card_title">${kittenSphynxNameUpper}</h3>
-          <h4 class="card_race">${kittenSphynxBreed}</h4>
+          <h4 class="card_race">${kittenSphynxData.breed}</h4>
           <p class="card_description">
-          ${kittenSphynxDesc}
+          ${kittenSphynxData.desc}
           </p>
         </li>`;
 
-const kittenMaineBreed = "Maine";
+const kittenMaineData = {
+  desc: "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.",
+  breed: "Maine",
+  name: "Cielo",
+  image: "https://dev.adalab.es/maine-coon-cat.webp",
+};
 
 // VARIABLES-DATOS DE LA PÁGINA
-let kittenMaineName = "Cielo";
-const kittenMaineNameUpper = kittenMaineName.toUpperCase();
-
-const kittenMaineDesc =
-  "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
-const kittenMaineImg = "https://dev.adalab.es/maine-coon-cat.webp";
+const kittenMaineNameUpper = kittenMaineData.name.toUpperCase();
 
 const kittenMaine = `
  <li class="card">
-          <img class="card_img" src=${kittenMaineImg} alt="maine-coon-cat" />
+          <img class="card_img" src=${kittenMaineData.image} alt="maine-coon-cat" />
           <h3 class="card_title">${kittenMaineNameUpper}</h3>
-          <h4 class="card_race">${kittenMaineBreed}</h4>
+          <h4 class="card_race">${kittenMaineData.breed}</h4>
           <p class="card_description">
-          ${kittenMaineDesc}
+          ${kittenMaineData.desc}
           </p>
         </li>`;
 
