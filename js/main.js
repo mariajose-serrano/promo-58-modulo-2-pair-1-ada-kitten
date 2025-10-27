@@ -38,14 +38,24 @@ const inputRace = document.querySelector(".js-inputRace");
 const inputDesc = document.querySelector(".js-inputDesc");
 const inputAdd = document.querySelector(".js-inputAdd");
 
-const kittenSiamesDesc =
-  "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+// Tenemos que crear objetos con los gatitos;
+//
 
-const kittenSiamesBreed = "Siames";
-let kittenSiamesName = "Anastacio";
+const kittenSiamesData = {
+  desc: "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente",
+  breed: "Siames",
+  name: "Anastacio",
+  image: "https://dev.adalab.es/gato-siames.webp",
+};
+
+// const kittenSiamesDesc =
+//"Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+
+//const kittenSiamesBreed = "Siames";
+//let kittenSiamesName = "Anastacio";
 const kittenSiamesNameUpper = kittenSiamesName.toUpperCase();
 
-const kittenSiamesImg = "https://dev.adalab.es/gato-siames.webp";
+//const kittenSiamesImg = "https://dev.adalab.es/gato-siames.webp";
 
 const kittenSiames = `<li class="card">
           <article>
@@ -156,7 +166,7 @@ btnCancel.addEventListener("click", (ev) => {
 
 inputAdd.addEventListener("click", (ev) => {
   ev.preventDefault();
-  console.log("Estoy entrando en el evento")
+  console.log("Estoy entrando en el evento");
   //para capturar el valor de ese input es .value
   const valueUrl = inputURL.value;
 
@@ -164,7 +174,7 @@ inputAdd.addEventListener("click", (ev) => {
 
   const valueRace = inputRace.value;
 
-  const  valueDesc = inputDesc.value;
+  const valueDesc = inputDesc.value;
 
   renderKitten(valueUrl, valueDesc, valueName, valueRace);
 });
