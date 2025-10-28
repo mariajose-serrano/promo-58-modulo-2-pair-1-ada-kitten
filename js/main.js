@@ -45,25 +45,28 @@ const kittenSiamesData = {
   desc: "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente",
   breed: "Siames",
   name: "Anastacio",
-  nameUpper: this.name.toUpperCase(),
   image: "https://dev.adalab.es/gato-siames.webp",
 };
+
+kittenSiamesData.nameUpper = kittenSiamesData.name.toUpperCase();
 
 const kittenSphynxData = {
   desc: "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.",
   breed: "Sphynx",
   name: "Fiona",
-  nameUpper: this.name.toUpperCase(),
   image: "https://dev.adalab.es/sphynx-gato.webp",
 };
+
+kittenSphynxData.nameUpper = kittenSphynxData.name.toUpperCase();
 
 const kittenMaineData = {
   desc: "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.",
   breed: "Maine",
   name: "Cielo",
-  nameUpper: this.name.toUpperCase(),
   image: "https://dev.adalab.es/maine-coon-cat.webp",
 };
+
+kittenMaineData.nameUpper = kittenMaineData.name.toUpperCase();
 
 const kittenDataList = [kittenSiamesData, kittenSphynxData, kittenMaineData];
 
