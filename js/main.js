@@ -45,61 +45,68 @@ const kittenSiamesData = {
   desc: "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente",
   breed: "Siames",
   name: "Anastacio",
+  nameUpper: this.name.toUpperCase(),
   image: "https://dev.adalab.es/gato-siames.webp",
 };
-
-const kittenSiamesNameUpper = kittenSiamesData.name.toUpperCase();
-
-const kittenSiames = `<li class="card">
-          <article>
-            <img class="card_img" src=${kittenSiamesData.image} alt="siames-cat" />
-            <h3 class="card_title">${kittenSiamesNameUpper}</h3>
-            <h4 class="card_race">${kittenSiamesData.breed}</h4>
-            <p class="card_description">
-              ${kittenSiamesData.desc}
-            </p>
-          </article>
-        </li>`;
 
 const kittenSphynxData = {
   desc: "Produce fascinación y curiosidad. Exótico, raro, bello, extraño… hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.",
   breed: "Sphynx",
   name: "Fiona",
+  nameUpper: this.name.toUpperCase(),
   image: "https://dev.adalab.es/sphynx-gato.webp",
 };
-
-const kittenSphynxNameUpper = kittenSphynxData.name.toUpperCase();
-
-const kittenSphynx = `<li class="card">
-          <img class="card_img" src=${kittenSphynxData.image} alt="sphynx-cat" />
-          <h3 class="card_title">${kittenSphynxNameUpper}</h3>
-          <h4 class="card_race">${kittenSphynxData.breed}</h4>
-          <p class="card_description">
-          ${kittenSphynxData.desc}
-          </p>
-        </li>`;
 
 const kittenMaineData = {
   desc: "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.",
   breed: "Maine",
   name: "Cielo",
+  nameUpper: this.name.toUpperCase(),
   image: "https://dev.adalab.es/maine-coon-cat.webp",
 };
 
+const kittenDataList = [kittenSiamesData, kittenSphynxData, kittenMaineData];
+
+const kittenSiames = `<li class="card">
+          <article>
+            <img class="card_img" src=${kittenDataList[0].image} alt="siames-cat" />
+            <h3 class="card_title">${kittenDataList[0].nameUpper}</h3>
+            <h4 class="card_race">${kittenDataList[0].breed}</h4>
+            <p class="card_description">
+              ${kittenDataList[0].desc}
+            </p>
+          </article>
+        </li>`;
+
+const kittenSphynx = `<li class="card">
+          <img class="card_img" src=${kittenDataList[1].image} alt="sphynx-cat" />
+          <h3 class="card_title">${kittenDataList[1].nameUpper}</h3>
+          <h4 class="card_race">${kittenDataList[1].breed}</h4>
+          <p class="card_description">
+          ${kittenDataList[1].desc}
+          </p>
+        </li>`;
+
 // VARIABLES-DATOS DE LA PÁGINA
-const kittenMaineNameUpper = kittenMaineData.name.toUpperCase();
 
 const kittenMaine = `
+
  <li class="card">
-          <img class="card_img" src=${kittenMaineData.image} alt="maine-coon-cat" />
-          <h3 class="card_title">${kittenMaineNameUpper}</h3>
-          <h4 class="card_race">${kittenMaineData.breed}</h4>
+          <img class="card_img" src=${kittenDataList[2].image} alt="maine-coon-cat" />
+          <h3 class="card_title">${kittenDataList[2].nameUpper}</h3>
+          <h4 class="card_race">${kittenDataList[2].breed}</h4>
           <p class="card_description">
-          ${kittenMaineData.desc}
+          ${kittenDataList[2].desc}
           </p>
         </li>`;
 
 jsList.innerHTML = kittenSiames + kittenSphynx + kittenMaine;
+
+// CREAMOS LA CONSTANTE DEL ARRAY
+
+//La variable tiene que estar definida antes de donde la vas a usar porque si no no te la coge
+
+//sustituimos en ${kittenDataList[2]} por ejm.
 
 //1. SI PONEMOS LA CLASE COLLAPSED A NEW FORM EN HTML  SE QUITA Y SE PONE, PERO DE PRIMERAS CUANDO LE DEMOS CLICK AL BOTON DE + SE TIENE QUE QUITA, VA A EMPEZAR UN EVENTO,
 //CUANDO HACEMOS CLICK EL FORMULARIO SE TIENE QUE MOSTRAR, EL BOTON ME LO TENGO QUE TRAER DE HTML A JAVASCRIPT CON UN QUERYSELECTOR
@@ -136,15 +143,15 @@ searchButton.addEventListener("click", (ev) => {
   ev.preventDefault();
   const descrSearchText = inputDescription.value;
 
-  if (kittenSiamesDesc.includes(descrSearchText)) {
+  if (kittenSiamesData.desc.includes(descrSearchText)) {
     jsList.innerHTML = kittenSiames;
   }
 
-  if (kittenSphynxDesc.includes(descrSearchText)) {
+  if (kittenSphynxData.desc.includes(descrSearchText)) {
     jsList.innerHTML = kittenSphynx;
   }
 
-  if (kittenMaineDesc.includes(descrSearchText)) {
+  if (kittenMaineData.desc.includes(descrSearchText)) {
     jsList.innerHTML = kittenMaine;
   }
 });
