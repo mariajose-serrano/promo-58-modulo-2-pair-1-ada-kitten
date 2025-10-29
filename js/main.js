@@ -103,7 +103,9 @@ const kittenMaine = `
           </p>
         </li>`;
 
-jsList.innerHTML = kittenSiames + kittenSphynx + kittenMaine;
+// llamamos a la funcion
+
+renderKittenList(kittenDataList);
 
 // CREAMOS LA CONSTANTE DEL ARRAY
 
@@ -134,6 +136,22 @@ function renderKitten(url, desc, name, race) {
         </li>`;
 }
 
+//creamos nueva funcion:
+
+function renderKittenList(kittenDataList) {
+  jsList.innerHTML = ""; //lo vaciamos
+  //Iteramos sobre el listado de gatitos
+  for (const oneKitten of kittenDataList) {
+    //Y por cada iteración pintamos un gatito.
+    renderKitten(
+      oneKitten.image,
+      oneKitten.desc,
+      oneKitten.nameUpper,
+      oneKitten.breed
+    );
+  }
+}
+
 addbutton.addEventListener("click", (ev) => {
   if (jsnewform.classList.contains("collapsed")) {
     showNewCatForm();
@@ -146,16 +164,14 @@ searchButton.addEventListener("click", (ev) => {
   ev.preventDefault();
   const descrSearchText = inputDescription.value;
 
-  if (kittenSiamesData.desc.includes(descrSearchText)) {
-    jsList.innerHTML = kittenSiames;
-  }
+  //variable para almacenar cada gato de la lista
+  jsList.innerHTML = "";
+  for (const kittenItem of kittenDataList) {
+    //Comprueba si cada gatito contiene la descripción
 
-  if (kittenSphynxData.desc.includes(descrSearchText)) {
-    jsList.innerHTML = kittenSphynx;
-  }
-
-  if (kittenMaineData.desc.includes(descrSearchText)) {
-    jsList.innerHTML = kittenMaine;
+    if (kittenItem.desc.includes(descrSearchText)) {
+      jsList.innerHTML = kittenItem;
+    }
   }
 });
 
