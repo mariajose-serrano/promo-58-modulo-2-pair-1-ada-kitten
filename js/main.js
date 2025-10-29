@@ -170,7 +170,12 @@ searchButton.addEventListener("click", (ev) => {
     //Comprueba si cada gatito contiene la descripción
 
     if (kittenItem.desc.includes(descrSearchText)) {
-      jsList.innerHTML = kittenItem;
+      renderKitten(
+        kittenItem.image,
+        kittenItem.desc,
+        kittenItem.nameUpper,
+        kittenItem.breed
+      );
     }
   }
 });
